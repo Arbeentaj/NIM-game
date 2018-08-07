@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<!------------------------------------------------------------------------------
+ * Problem   : Write a Javascript program to design a nim game. 
+ * Date      : 4-6-2018
+ * Developer : Arbeen taj
+ * Company   : WSA
+------------------------------------------------------------------------------->
+<html>
+	<body>
+		<script>
+			var stones = prompt("enter the number of stones in a heap");
+			var takeAway = 3;
+			var player1 = true;
+			var player2 = false;
+			if(stones == 3)
+			{
+				document.write("you won");
+			}
+			else
+			{
+			
+				for( var i = 1; i <= stones; i++)
+				{
+					if(player1)
+					{
+						stones = stones - takeAway;
+						player1 = false;
+						player2 = true;
+						
+						if(stones <= 3)
+						{
+							document.write("your friend won the game");
+							break;
+						}
+					}
+					if(player2)
+					{
+						stones = stones - takeAway;
+						player1 = true;
+						player2 = false;
+						
+						if(stones <= 3)
+						{
+							document.write("you won the game");
+							break;
+						}
+					}
+				}
+			}
+					
+			 
+				
+				
+				
+			
+			</script>
+			</body>
+			</html>
+				
